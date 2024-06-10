@@ -1,0 +1,285 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: linear-gradient(to left, #FF7400, #fd7a6e);
+            padding: 20px 0;
+            align-items: center;
+        }
+
+
+       .container1 {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-left: -70px;
+        }
+
+        .logo a {
+    text-decoration: none; 
+    color: white; 
+    font-size: 24px; 
+}
+
+.logo .icone {
+    margin-right: 10px; 
+}
+
+.logo-text {
+    color: white; 
+}
+
+        .search-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-container input[type="text"] {
+            width: 500px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-right: 10px;
+        }
+
+        .search-container input[type="submit"] {
+            
+            background-color: rgba(255, 237, 124);
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .auth-buttons {
+            display: flex;
+            align-items: center;
+            transition: opacity 0.3s ease;
+
+        }
+
+        .auth-buttons button, .auth-buttons a {
+            background-color: rgba(255, 237, 124);
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+        }
+
+
+
+        .hero {
+            background: linear-gradient(to left, #FF7400, #fd7a6e );
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+       .recruiting {
+       
+       padding: 50px 0;
+       text-align: center;
+        }
+
+.recruiting-buttons button {
+    background-color: rgba(255, 237, 124);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease; 
+}
+
+
+.recruiting-buttons button:hover {
+    background-color: rgba(255, 200, 50, 1);
+}
+
+
+
+
+/*вакансії*/
+.vacancies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-auto-rows: minmax(100px, auto); 
+    gap: 20px; 
+    justify-items: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.vacancy {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vacancy div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.vacancy h3 {
+    margin-top: 0;
+    color: #6E00DB;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.vacancy p {
+    margin: 10px 0;
+    color: #555;
+    flex-grow: 1;
+}
+
+.vacancy .favorite-count {
+    font-weight: bold;
+    color: #ff4d4f;
+}
+
+.vacancy:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.vacancy:hover h3 {
+    color: #4A00A0;
+}
+
+
+
+/*вакансії*/
+
+
+
+
+
+        .fon {
+background: rgba(255, 237, 124, 0.3);
+        }
+
+
+.search-container input[type="submit"]:hover {
+    background-color: rgba(255, 200, 50, 1);}
+
+.auth-buttons button:hover,
+.auth-buttons a:hover {
+    background-color: rgba(255, 200, 50, 1);
+}
+
+
+
+  
+  /* Підвал сайту */
+
+  footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 100px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-section h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-section p {
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+  
+  /* Підвал сайту */

@@ -1,0 +1,156 @@
+@media (max-width: 1430px) {
+    .container1 {
+        width: 90%;
+    }
+
+    .search-container input[type="text"] {
+        width: 400px;
+    }
+}
+
+@media (max-width: 1208px) {
+    .search-container input[type="text"] {
+        width: 350px;
+    }
+
+    .auth-buttons button, .auth-buttons a {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 1165px) {
+    .container1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+
+    .search-container input[type="text"] {
+        width: 300px;
+    }
+
+    .auth-buttons {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+     .vacancies {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .search-container input[type="text"] {
+        width: 250px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .vacancies {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 782px) {
+    .search-container input[type="text"] {
+        width: 200px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .auth-buttons button, .auth-buttons a {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+
+    .vacancies {
+        grid-template-columns: 1fr;
+    }
+
+    
+}
+
+@media (max-width: 560px) {
+    .logo img {
+        height: 30px;
+        margin-left: -50px;
+    }
+
+    .search-container input[type="text"] {
+        width: 150px;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .auth-buttons button, .auth-buttons a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0;
+    }
+
+    .search-container input[type="text"] {
+        width: 120px;
+    }
+
+    .auth-buttons {
+        margin-top: 5px;
+    }
+
+    .auth-buttons button, .auth-buttons a {
+        padding: 5px 10px;
+        font-size: 8px;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 360px) {
+    .search-container input[type="text"] {
+        width: 100px;
+    }
+
+    .auth-buttons button, .auth-buttons a {
+        padding: 4px 8px;
+       /* font-size: 6px; */
+    }
+
+    .hero-content h1 {
+        font-size: 16px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        padding: 10px;
+    }
+}

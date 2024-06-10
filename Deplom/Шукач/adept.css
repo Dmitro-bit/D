@@ -1,0 +1,163 @@
+@media (max-width: 1560px) {
+    .search-container input[type="text"] {
+        width: 420px;
+    }
+
+
+}
+
+
+
+
+
+
+@media (max-width: 1430px) {
+    .search-container input[type="text"] {
+        width: 420px;
+    }
+
+
+}
+
+
+
+@media (max-width: 1208px) {
+    .search-container input[type="text"] {
+        width: 350px;
+    }
+
+}
+
+@media (max-width: 1165px) {
+
+    .search-container input[type="text"] {
+        width: 300px;
+    }
+    
+
+
+}
+
+@media (max-width: 992px) {
+    .search-container input[type="text"] {
+        width: 250px;
+    }
+
+     .tab-container {
+        width: 90%;
+    }
+
+    .tablink {
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+
+
+}
+
+@media (max-width: 782px) {
+    .search-container input[type="text"] {
+        width: 200px;
+        height: 5px;
+    }
+    .search-container input[type="submit"] {
+        padding: 8px 16px;
+    }
+
+ .tab-container {
+        width: 80%;
+    }
+
+    .tablink {
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+   
+}
+
+@media (max-width: 560px) {
+    .search-container input[type="text"] {
+        width: 150px;
+    }
+    .search-container input[type="submit"] {
+        padding: 6px 12px;
+    }
+     .tab-container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .tablink {
+        padding: 8px 5px;
+        font-size: 10px;
+    }
+}
+
+
+   
+
+@media (max-width: 480px) {
+    .search-container input[type="text"] {
+        width: 120px;
+    }
+    .search-container input[type="submit"] {
+        padding: 4px 8px;
+    }
+    
+    .logo img {
+        height: 30px;
+    }
+    .logo a {
+        font-size: 20px;
+    }
+    
+.tablink {
+        font-size: 10px;
+        padding: 8px 2px;
+    }
+
+
+    .container {
+        margin-left: 100px;
+    }
+
+    .inputfile + label {
+        padding: 0px 5px;
+    }
+    
+    
+}
+
+@media (max-width: 360px) {
+    .search-container input[type="text"] {
+        width: 100px;
+    }
+    .search-container input[type="submit"] {
+        padding: 3px 6px;
+    }
+
+        .tablink {
+        font-size: 8px;
+        padding: 5px 2px;
+    }
+
+    .tabcontent {
+        padding: 15px;
+    }
+    
+    .logo img {
+        height: 20px;
+    }
+    .logo a {
+        font-size: 16px;
+    }
+    .footer-container {
+        width: 75%;
+    }
+    .footer-section {
+        padding: 5px;
+    }
+
+
+  
+}

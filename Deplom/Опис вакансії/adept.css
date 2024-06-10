@@ -1,0 +1,259 @@
+@media (max-width: 1560px) {
+    .search-container input[type="text"] {
+        width: 420px;
+    }
+
+     .container2 {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1430px) {
+    .search-container input[type="text"] {
+        width: 420px;
+    }
+
+     .container2 {
+        width: 80%;
+    }
+}
+
+
+@media (max-width: 1300px) {
+
+
+}
+
+@media (max-width: 1208px) {
+    .search-container input[type="text"] {
+        width: 350px;
+    }
+    .auth-buttons button, .auth-buttons a {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1165px) {
+
+    .search-container input[type="text"] {
+        width: 300px;
+    }
+    
+
+
+
+}
+
+@media (max-width: 992px) {
+    .search-container input[type="text"] {
+        width: 250px;
+    }
+
+   
+    
+}
+
+@media (max-width: 782px) {
+    .search-container input[type="text"] {
+        width: 200px;
+    }
+    .search-container input[type="submit"] {
+        padding: 8px 16px;
+    }
+    .auth-buttons button, .auth-buttons a {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    
+.container {
+        width: 80%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .vacancy-detail h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .vacancy-detail p {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+
+    .right-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+
+    }
+
+    .respond-button {
+
+    height: 28px;
+  
+}
+
+.back-button {
+   height: 30px; 
+}
+
+    
+}
+
+@media (max-width: 560px) {
+    .search-container input[type="text"] {
+        width: 150px;
+    }
+    .search-container input[type="submit"] {
+        padding: 6px 12px;
+    }
+    .auth-buttons button, .auth-buttons a {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+
+
+           .container {
+        width: 80%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .vacancy-detail h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .vacancy-detail p {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+
+    .right-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+     
+}
+
+@media (max-width: 480px) {
+    .search-container input[type="text"] {
+        width: 120px;
+        height: 5px;
+    }
+    .search-container input[type="submit"] {
+        padding: 4px 8px;
+    }
+    .auth-buttons button, .auth-buttons a {
+        padding: 4px 8px;
+        font-size: 8px;
+    }
+    .logo img {
+        height: 30px;
+    }
+    .logo a {
+        font-size: 20px;
+    }
+    .footer-container {
+        width: 90%;
+    }
+    .footer-section {
+        padding: 10px;
+    }
+
+    .container {
+        width: 80%;
+        margin: 5px auto;
+        padding: 5px;
+    }
+
+    .vacancy-detail h2 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .vacancy-detail p {
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+
+
+
+    .right-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    button {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+    
+}
+
+@media (max-width: 360px) {
+    .search-container input[type="text"] {
+        width: 100px;
+    }
+    .search-container input[type="submit"] {
+        padding: 3px 6px;
+    }
+    .auth-buttons button, .auth-buttons a {
+        padding: 3px 6px;
+        /*font-size: 6px;*/
+    }
+    .logo img {
+        height: 20px;
+    }
+    .logo a {
+        font-size: 16px;
+    }
+    .footer-container {
+        width: 95%;
+    }
+    .footer-section {
+        padding: 5px;
+    }
+
+    .container {
+        width: 80%;
+        margin: 5px auto;
+        padding: 5px;
+    }
+
+    .vacancy-detail h2 {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    .vacancy-detail p {
+        font-size: 10px;
+        margin-bottom: 2px;
+    }
+
+
+
+    .right-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    button {
+        padding: 2px 4px;
+        font-size: 8px;
+    }
+    
+}

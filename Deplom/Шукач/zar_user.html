@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="images/x-icon" href="../Фото/free-icon-vacancy.png">
+    <link rel="stylesheet" href="zar_user1.css">
+    <title>Реєстрація користувача</title>
+</head>
+<body>
+<form id="registerForm" method="post" enctype="multipart/form-data">
+    <button class="back-button" type="button" onclick="history.back()">&#x2190;</button>
+    <h2>Реєстрація користувача</h2>
+    <label for="name">Ім'я:</label>
+    <input type="text" id="name" name="name" required maxlength="25" oninput="checkLength(this, 25, nameLimit); validateText(this)">
+    <div class="char-limit" id="nameLimit">Залишилось символів: 25</div>
+    
+    <label for="surname">Призвище:</label>
+    <input type="text" id="surname" name="surname" required maxlength="25" oninput="checkLength(this, 25, surnameLimit); validateText(this)">
+    <div class="char-limit" id="surnameLimit">Залишилось символів: 25</div>
+
+    <label for="fone">Номер телефону:</label>
+    <input type="tel" id="fone" name="fone" required maxlength="12" oninput="checkLength(this, 12, foneLimit); validatePhone(this); checkPhone(this)">
+    <div class="char-limit" id="foneLimit">Залишилось символів: 12</div>
+    <div id="phoneError" class="error"></div>
+
+    <label for="gmail">Електронна пошта:</label>
+    <input type="email" id="gmail" name="gmail" required maxlength="50" oninput="checkLength(this, 50, gmailLimit); checkEmail(this)">
+    <div class="char-limit" id="gmailLimit">Залишилось символів: 50</div>
+    <div id="emailError" class="error"></div>
+
+    <label for="password">Пароль:</label>
+    <input type="password" id="password" name="password" required minlength="4" oninput="validatePassword(this)">
+    <div id="passwordError" class="error"></div>
+
+   <p>
+    Зображення резюме: <input class="inputfile" type="file" id="file" data-multiption="{count} файлов обрано" name="rezyme" accept="image/*">
+    <label for="file">Оберіть фото</label>
+</p>
+<p>
+    <img src="data:image/jpeg;base64,<?php echo base64_encode($user['rezyme']); ?>" alt="" style="max-width: 90%;">
+</p>
+
+    <div id="message" class="message"></div>
+
+    <div class="submit-container">
+        <input type="submit" value="Зареєструватися">
+    </div>
+</form>
+
+<script>
+    function checkLength(input, maxLength, output) {
+        var remaining = maxLength - input.value.length;
+        output.textContent = "Осталось символов: " + remaining;
+    }
+
+    function validateText(input) {
+        input.value = input.value.replace(/[^a-zA-Zа-яА-ЯєЄіІїЇґҐ\s-]/g, '');
+    }
+
+    function validatePhone(input) {
+        input.value = input.value.replace(/[^0-9]/g, '');
+    }
+
+    function validatePassword(input) {
+        var errorDiv = document.getElementById("passwordError");
+        var regex = /^(?=.*[A-Za-z]).{4,}$/;
+        if (!regex.test(input.value)) {
+            errorDiv.textContent = "Пароль має бути мінімум 4 символи і містити хоча б одну латинську літеру.";
+        } else {
+            errorDiv.textContent = "";
+        }
+    }
+
+    function checkEmail(input) {
+        var email = input.value;
+        if (email.length === 0) {
+            document.getElementById("emailError").textContent = "";
+            return;
+        }
+
+        fetch('register_user.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === "exists") {
+                document.getElementById("emailError").textContent = "Такий імейл вже зареєстрований";
+            } else {
+                document.getElementById("emailError").textContent = "";
+            }
+        })
+        .catch(error => {
+            document.getElementById("emailError").textContent = "Помилка перевірки імейлу";
+        });
+    }
+
+    function checkPhone(input) {
+        var phone = input.value;
+        if (phone.length === 0) {
+            document.getElementById("phoneError").textContent = "";
+            return;
+        }
+
+        fetch('register_user.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ phone: phone })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === "exists") {
+                document.getElementById("phoneError").textContent = "Такий номер телефону вже зареєстрований";
+            } else {
+                document.getElementById("phoneError").textContent = "";
+            }
+        })
+        .catch(error => {
+            document.getElementById("phoneError").textContent = "Помилка перевірки телефону";
+        });
+    }
+
+    document.getElementById("registerForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        var passwordInput = document.getElementById("password");
+        var regex = /^(?=.*[A-Za-z]).{4,}$/;
+        if (!regex.test(passwordInput.value)) {
+            document.getElementById("passwordError").textContent = "Пароль має бути мінімум 4 символи і містити хоча б одну латинську літеру.";
+            return;
+        }
+
+        var formData = new FormData(this);
+        fetch('register_user.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            var messageDiv = document.getElementById("message");
+            if (data.status === "error") {
+                messageDiv.textContent = data.message;
+            } else {
+                messageDiv.textContent = "";
+                alert("Реєстрація пройшла успішно!");
+                window.location.href = '../Головна/Головна.php'; 
+            }
+        })
+        .catch(error => {
+            document.getElementById("message").textContent = "Помилка: " + error.message;
+        });
+    });
+</script>
+</body>
+</html>

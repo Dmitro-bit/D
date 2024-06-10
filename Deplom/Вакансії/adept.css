@@ -1,0 +1,347 @@
+
+@media (max-width: 1560px) {
+    .search-container input[type="text"] {
+        width: 420px;
+    }
+
+     .container2 {
+        width: 70%;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 1430px) {
+    .search-container input[type="text"] {
+        width: 420px;
+    }
+
+     .container2 {
+        width: 80%;
+    }
+}
+
+
+@media (max-width: 1300px) {
+
+     .container2 {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1208px) {
+    .search-container input[type="text"] {
+        width: 350px;
+    }
+    .auth-buttons button, .auth-buttons a {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1165px) {
+
+    .search-container input[type="text"] {
+        width: 300px;
+    }
+    
+
+    .container2 {
+        width: 60%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .filters {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 992px) {
+    .search-container input[type="text"] {
+        width: 250px;
+    }
+
+        .container2 {
+        width: 80%;
+
+    }
+}
+
+@media (max-width: 782px) {
+    .search-container input[type="text"] {
+        width: 200px;
+        height: 5px;
+    }
+    .search-container input[type="submit"] {
+        padding: 8px 16px;
+    }
+    .auth-buttons button, .auth-buttons a {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    
+
+     .vacancy {
+        width: 90%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+    }
+
+    .favorite-button {
+        margin: 8px;
+        font-size: 18px;
+    }
+
+    .respond-button {
+        padding: 8px 16px;
+        margin-top: 8px;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+
+    .container2 {
+        width: 70%;
+
+    }
+
+    .filters label,
+    .filters select,
+    .filters button,
+    .filters input[type="checkbox"] {
+        font-size: 10px;
+        padding: 6px;
+    }
+    .filters button {
+        padding: 6px 12px;
+    }
+
+        .filters input[type="checkbox"] {
+        width: 7px;
+        height: 7px;
+    }
+
+
+ 
+    .vacancy h3 {
+        font-size: 20px;
+    }
+
+    .vacancy p {
+        font-size: 14px;
+    }
+
+    .vacancy .time {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 560px) {
+    .search-container input[type="text"] {
+        width: 150px;
+    }
+    .search-container input[type="submit"] {
+        padding: 6px 12px;
+    }
+    .auth-buttons button, .auth-buttons a {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+
+
+        .container2 {
+        width: 60%;
+
+    }
+
+     .vacancy {
+        padding: 6px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+    }
+
+    .favorite-button {
+        margin: 6px;
+        font-size: 16px;
+    }
+
+    .respond-button {
+        padding: 6px 12px;
+        margin-top: 6px;
+        border-radius: 3px;
+        font-size: 12px;
+    }
+
+
+
+
+
+
+    .filters label,
+    .filters select,
+    .filters button,
+    .filters input[type="checkbox"] {
+        font-size: 8px;
+        padding: 4px;
+    }
+    .filters button {
+        padding: 4px 8px;
+    }
+    .filters input[type="checkbox"] {
+        width: 5px;
+        height: 5px;
+    }
+}
+
+
+    .vacancy h3 {
+        font-size: 18px;
+    }
+
+    .vacancy p {
+        font-size: 12px;
+    }
+
+    .vacancy .time {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-container input[type="text"] {
+        width: 120px;
+    }
+    .search-container input[type="submit"] {
+        padding: 4px 8px;
+    }
+    .auth-buttons button, .auth-buttons a {
+        padding: 4px 8px;
+        font-size: 8px;
+    }
+    .logo img {
+        height: 30px;
+    }
+    .logo a {
+        font-size: 20px;
+    }
+    .footer-container {
+        width: 90%;
+    }
+    .footer-section {
+        padding: 10px;
+    }
+
+     .container2 {
+        width: 100%;
+
+    }
+
+
+
+    .container {
+        margin-left: 100px;
+    }
+    .vacancy {
+
+        padding: 4px;
+        margin-bottom: 8px;
+        border-radius: 2px;
+    }
+
+    .favorite-button {
+        margin: 4px;
+        font-size: 14px;
+    }
+
+    .respond-button {
+        padding: 4px 8px;
+        margin-top: 4px;
+        border-radius: 2px;
+        font-size: 10px;
+    }
+
+
+
+      .vacancy h3 {
+        font-size: 16px;
+    }
+
+    .vacancy p {
+        font-size: 10px;
+    }
+
+    .vacancy .time {
+        font-size: 8px;
+    }
+    
+}
+
+@media (max-width: 360px) {
+    .search-container input[type="text"] {
+        width: 100px;
+    }
+    .search-container input[type="submit"] {
+        padding: 3px 6px;
+    }
+    .auth-buttons button, .auth-buttons a {
+        padding: 3px 6px;
+        /*font-size: 6px;*/
+    }
+    .logo img {
+        height: 20px;
+    }
+    .logo a {
+        font-size: 16px;
+    }
+    .footer-container {
+        width: 95%;
+    }
+    .footer-section {
+        padding: 5px;
+    }
+
+    .container2 {
+        width: 95%;
+    }
+
+      .vacancy {
+        padding: 2px;
+        margin-bottom: 5px;
+        border-radius: 1px;
+    }
+
+    .favorite-button {
+        margin: 2px;
+        font-size: 12px;
+    }
+
+    .respond-button {
+        padding: 2px 6px;
+        margin-top: 2px;
+        border-radius: 1px;
+        font-size: 8px;
+    }
+
+
+    .vacancy h3 {
+        font-size: 14px;
+    }
+
+    .vacancy p {
+        font-size: 8px;
+    }
+
+    .vacancy .time {
+        font-size: 6px;
+    }
+
+    .vacancy-link {
+
+    width: calc(100% - 50px); 
+}
+    
+}

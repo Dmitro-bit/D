@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="images/x-icon" href="../Фото/free-icon-vacancy.png">
+    <link rel="stylesheet" href="zar_admin.css">
+    <title>Реєстрація роботодавця</title>
+    
+</head>
+<body>
+    <form id="registrationForm">
+        <button class="back-button" type="button" onclick="history.back()">&#x2190;</button>
+        <h2>Реєстрація роботодавця</h2>
+
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" name="name" oninput="validateText(this)" required>
+        <div class="char-limit" id="nameCharLimit">Залишилось символів: 25</div>
+
+        <label for="surname">Прізвище:</label>
+        <input type="text" id="surname" name="surname" oninput="validateText(this)" required>
+        <div class="char-limit" id="surnameCharLimit">Залишилось символів: 25</div>
+
+        <label for="gmail">Електронна пошта:</label>
+        <input type="email" id="gmail" name="gmail" oninput="validateEmail(this)" required>
+        <div class="char-limit" id="emailCharLimit">Залишилось символів: 50</div>
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" oninput="validatePassword(this)" required>
+        <div class="error" id="passwordError"></div>
+        <div class="message" id="message"></div>
+
+
+        <div class="submit-container">
+            <input type="submit" value="Зареєструватись">
+        </div>
+    </form>
+
+    <script>
+        function checkLength(input, maxLength, output) {
+            var remaining = maxLength - input.value.length;
+            output.textContent = "Залишилось символів: " + remaining;
+        }
+
+        function validateText(input) {
+            input.value = input.value.replace(/[^a-zA-Zа-яА-ЯєЄіІїЇґҐ\s-]/g, '');
+            var maxLength = 25;
+            var output = input.id === 'name' ? document.getElementById('nameCharLimit') : document.getElementById('surnameCharLimit');
+            checkLength(input, maxLength, output);
+        }
+
+        function validateEmail(input) {
+            var maxLength = 50;
+            var output = document.getElementById('emailCharLimit');
+            checkLength(input, maxLength, output);
+        }
+
+        function validatePassword(input) {
+            var errorDiv = document.getElementById("passwordError");
+            var regex = /^(?=.*[A-Za-z]).{4,}$/;
+            if (!regex.test(input.value)) {
+                errorDiv.textContent = "Пароль має бути мінімум 4 символи і містити хоча б одну латинську літеру.";
+            } else {
+                errorDiv.textContent = "";
+            }
+        }
+
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var passwordInput = document.getElementById("password");
+            var regex = /^(?=.*[A-Za-z]).{4,}$/;
+            if (!regex.test(passwordInput.value)) {
+                document.getElementById("passwordError").textContent = "Пароль має бути мінімум 4 символи і містити хоча б одну латинську літеру.";
+                return;
+            }
+
+            var formData = new FormData(this);
+            fetch('zar_admin.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                var messageDiv = document.getElementById("message");
+                if (data.status === "error") {
+                    messageDiv.textContent = data.message;
+                    console.error(data.message);
+                } else {
+                    messageDiv.textContent = "Реєстрація пройшла успішно!";
+                    messageDiv.style.color = "green";
+                    setTimeout(function() {
+                        window.location.href = '../Головна/Головна.php';
+                    }, 2000);
+                }
+            })
+            .catch(error => {
+                document.getElementById("message").textContent = "Ошибка: " + error.message;
+                console.error("Ошибка: " + error.message);
+            });
+        });
+    </script>
+</body>
+</html>

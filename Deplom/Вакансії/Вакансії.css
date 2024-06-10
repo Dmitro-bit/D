@@ -1,0 +1,394 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgba(255, 237, 124, 0.3);
+}
+
+
+
+
+   .container1 {
+    background: linear-gradient(to left, #FF7400, #fd7a6e);
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .container3 {
+            background: linear-gradient(to left, #FF7400, #fd7a6e);
+            width: 100%;
+            height: 50px;
+            margin: 20 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-left: 40px;
+        }
+
+          .logo a {
+    text-decoration: none; 
+    color: white; 
+    font-size: 24px; 
+}
+
+.logo .icone {
+    margin-right: 10px; 
+}
+
+.logo-text {
+    color: white; 
+}
+
+        .search-container {
+            background: linear-gradient(to left, #FF7400, #fd7a6e);
+            flex: 1;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-container input[type="text"] {
+            width: 500px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-right: 10px;
+        }
+
+        .search-container input[type="submit"] {
+            background-color: rgba(255, 237, 124);
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .auth-buttons {
+            display: flex;
+            align-items: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .auth-buttons button, .auth-buttons a {
+            background-color: rgba(255, 237, 124);
+            border: none;
+            margin: 30px 40px 0px 10px;
+
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .auth-buttons button:hover,
+
+.auth-buttons a:hover {
+    background-color: rgba(255, 200, 50, 1);
+}
+
+.search-container input[type="submit"]:hover {
+    background-color: rgba(255, 200, 50, 1);
+}
+
+        .search-section {
+            background-color: #f1f1f1;
+            position: sticky;
+            top: 0;
+            
+            transition: top 0.3s;
+        }
+
+        
+
+        .search-result-item {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .search-result-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .vacancy {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .favorite-button {
+            background-color: transparent;
+            border: none;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .favorite-button.favorited {
+            color: red;
+        }
+
+        .respond-button {
+            background-color: rgba(255, 237, 124);
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .respond-button.responded {
+            background: linear-gradient(to left, #FF7400, #fd7a6e);
+
+            color: white;
+        }
+
+
+/* Поисковое область */
+
+
+
+/* Фільтри */
+
+
+
+.container2 {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.recruiting {
+    background-color: #f8f8f8;
+    padding: 30px 0;
+    text-align: center;
+
+}
+
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.filters label,
+.filters select,
+.filters button,
+.filters input[type="checkbox"] {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.filters select,
+.filters input[type="checkbox"] {
+    background-color: #f9f9f9;
+}
+
+.filters button {
+    background-color: rgba(255, 237, 124);
+    border: none;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.filters button:hover {
+    background-color: rgba(255, 200, 50, 1);
+}
+
+
+/* Фільтри */
+
+
+/*форма вакансії*/
+
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.vacancies {
+    padding: 20px 0;
+}
+
+.vacancies .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.vacancies h2 {
+    margin: 0 0 20px 0;
+}
+
+.vacancy-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vacancy {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 500px;
+}
+
+
+
+
+.vacancy-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    width: calc(100% - 120px); 
+}
+
+.vacancy-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.vacancy-info h3 {
+    margin: 0 0 10px 0;
+}
+
+.vacancy-info p {
+    margin: 0 0 10px 0;
+}
+
+.vacancy-info .time {
+    font-size: 12px;
+    color: gray;
+}
+
+.apply-button {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+
+
+
+
+        /*форма вакансії*/
+
+
+ /* Підвал сайту */
+
+  footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 300px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-section h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-section p {
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+  
+  /* Підвал сайту */
+

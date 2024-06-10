@@ -1,0 +1,137 @@
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background: rgba(255, 237, 124, 0.3);
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 50px 0 50px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(255, 237, 124);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgba(255, 200, 50, 1);
+        }
+
+         select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 100%;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+    }
+
+    .checkbox-label {
+        display: inline-block;
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .checkbox-label input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .checkbox-custom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: #eee;
+        border-radius: 3px;
+    }
+
+    .checkbox-label:hover input ~ .checkbox-custom {
+        background-color: #ccc;
+    }
+
+    .checkbox-label input:checked ~ .checkbox-custom {
+        background-color: #2196F3;
+    }
+
+    .checkbox-custom:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    .checkbox-label input:checked ~ .checkbox-custom:after {
+        display: block;
+    }
+
+    .checkbox-custom:after {
+        left: 7px;
+        top: 3px;
+        width: 6px;
+        height: 12px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+
+
+     .back-button {
+            background-color: rgba(255, 237, 124);
+            border: none;
+            border-radius: 50px;
+            margin: 10px 0 10px 0;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .back-button:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 200, 50, 1);
+        }
+
+                .char-limit {
+            font-size: 0.9em;
+            color: grey;
+        }
+    

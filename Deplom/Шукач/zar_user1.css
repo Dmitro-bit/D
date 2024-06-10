@@ -1,0 +1,116 @@
+
+         body {
+      font-family: Arial, sans-serif;
+      background: rgba(255, 237, 124, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .char-limit {
+      font-size: 12px;
+      color: #888;
+      text-align: right;
+      margin-bottom: 10px;
+    }
+
+    .submit-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      background-color: rgba(255, 237, 124);
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: rgba(255, 200, 50, 1);
+      transform: scale(1.05);
+    }
+
+    .back-button {
+      background-color: rgba(255, 237, 124);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .back-button:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 200, 50, 1);
+    }
+
+    .error {
+      color: red;
+      font-size: 12px;
+    }
+
+    .message {
+      color: red;
+      font-size: 14px;
+      text-align: center;
+    }
+ 
+
+        .inputfile {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .inputfile + label {
+            background: linear-gradient(to left, #FF7400, #fd7a6e);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 10px;
+        }
+
+        .inputfile:focus + label,
+        .inputfile + label:hover {
+              transform: scale(1.05);
+            background: rgba(255, 200, 50, 3);
+        }
